@@ -291,8 +291,13 @@ class Bot:
 			command = message
 			args = ""
 			if b" " in message:
-				command = message.split()[0].lower()
-				args = message.split()[1:]
+                # handle telegram bridge
+                if command[0] == b"<" and any([p[0] == b"!" for p in message.split()]):
+                    command = message.split()[1].lower()
+                    args = message.split()[2:]
+                else:
+                    command = message.split()[0].lower()
+                    args = message.split()[1:]
 
 			if action.upper() == b"001" and not self.joined:
 				for chan in self.chans:

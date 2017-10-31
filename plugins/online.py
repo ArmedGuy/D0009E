@@ -21,7 +21,7 @@ class Online(PluginBase):
             if server not in json:
                 return "Server not found"
             else:
-                return "Users online on %s: %s" % (server, json[server])
+                return "Users online on %s: %s" % (server, ", ".join(json[server]))
             
 
 mainclass = Online

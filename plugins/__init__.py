@@ -3,4 +3,4 @@ __all__ = ['pluginbase', 'help', 'temp', 'title', 'lunch', 'nextep',
 #'quiet_messages',
 'names',
 'aao', 'week', 'labbar', 'xmas', 'google', 'pick', 'tenta', 'twitter_reader',
-'talking', 'kolli', 'ticker', 'down', 'hyphenator', 'fairdieroll']
+'talking', 'kolli', 'ticker', 'down', 'hyphenator', 'fairdieroll', 'online']

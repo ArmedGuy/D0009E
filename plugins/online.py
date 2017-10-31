@@ -16,7 +16,7 @@ class Online(PluginBase):
         try:
             url = "http://www.ludd.ltu.se/~armedguy/users_online.php"
             f = urllib.request.urlopen(url)
-			data = f.read().decode('utf-8')
+            data = f.read().decode('utf-8')
             json = json.reads(data)
             if server not in json:
                 return "Server not found"
